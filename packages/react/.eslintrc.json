@@ -1,5 +1,5 @@
 {
-    "extends": "@ignite-ui/eslint-config",
+    "extends": "@lucasjsr/eslint-config",
     "ignorePatterns": [
         "dist/*"
     ]

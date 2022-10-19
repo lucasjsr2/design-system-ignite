@@ -1,5 +1,5 @@
 {
-    "name": "@ignite-ui/tokens",
+    "name": "@lucasjsr/tokens",
     "version": "1.0.0",
     "description": "",
     "main": "./dist/index.js",
@@ -15,8 +15,8 @@
     "author": "Lucas Juan",
     "license": "MIT",
     "devDependencies": {
-        "@ignite-ui/ts-config": "*",
-        "@ignite-ui/eslint-config": "*",
+        "@lucasjsr/ts-config": "*",
+        "@lucasjsr/eslint-config": "*",
         "tsup": "^6.2.3",
         "typescript": "^4.8.4"
     }
