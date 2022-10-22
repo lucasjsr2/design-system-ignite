@@ -1,7 +1,6 @@
 import { ComponentProps, ReactElement } from 'react'
 import * as ToastComponent from '@radix-ui/react-toast'
 import { X } from 'phosphor-react'
-
 import {
   ToastContainer,
   StyledHeading,
@@ -23,7 +22,7 @@ export const Toast = ({
     <ToastComponent.Provider duration={5000}>
       <ToastContainer {...props}>
         <ToastComponent.Title>
-          <StyledHeading size="xl">{title}</StyledHeading>
+          <StyledHeading size="md">{title}</StyledHeading>
         </ToastComponent.Title>
 
         <ToastComponent.Description>
