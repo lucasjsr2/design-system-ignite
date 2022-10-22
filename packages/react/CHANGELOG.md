@@ -1,5 +1,11 @@
 # @lucasjsr/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Add Toast Component
+
 ## 2.0.1
 
 ### Patch Changes
