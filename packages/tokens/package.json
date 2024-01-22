@@ -15,8 +15,8 @@
     "author": "Lucas Juan",
     "license": "MIT",
     "devDependencies": {
-        "@lucasjsr/ts-config": "*",
         "@lucasjsr/eslint-config": "*",
+        "@lucasjsr/ts-config": "*",
         "tsup": "^6.2.3",
         "typescript": "^4.8.4"
     }
