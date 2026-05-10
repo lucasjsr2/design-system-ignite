@@ -5,10 +5,14 @@
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-        "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react",
+        "build": "tsup src/index.tsx --format esm,cjs --dts --external react --external react-dom",
+        "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react --external react-dom",
         "lint": "eslint src/**/*.ts* --fix"
     },
     "keywords": [],
@@ -18,9 +22,10 @@
         "@lucasjsr/eslint-config": "*",
         "@lucasjsr/tokens": "*",
         "@lucasjsr/ts-config": "*",
-        "@types/react": "^18.0.21",
-        "@types/react-dom": "^18.0.6",
-        "react": "^18.2.0",
+        "@types/react": "^19.2.14",
+        "@types/react-dom": "^19.2.3",
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6",
         "tsup": "^8.5.1",
         "typescript": "^6.0.3"
     },
