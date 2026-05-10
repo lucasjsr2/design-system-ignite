@@ -17,7 +17,7 @@ Internal packages reference each other with the `"*"` workspace version (e.g. `"
 ## Toolchain
 
 - Bun (`packageManager` pinned at the root) is the package manager and script runner — there is no `npm`/`pnpm` in the workflow. CI installs with `bun install --frozen-lockfile`.
-- Node `>=22` is the runtime engine. TypeScript `^6.0`, tsup `^8`, Vite `^5`, Storybook `^8.6`, React `^19`.
+- Node `>=22` is the runtime engine. TypeScript `^6.0`, tsup `^8`, Vite `^8`, Storybook `^10.3`, React `^19`.
 - [bunfig.toml](bunfig.toml) sets `linker = "hoisted"` so ESLint can resolve `@rocketseat/eslint-config`'s transitive plugins from each package's perspective. Without this Bun installs into `node_modules/.bun/<hash>` and ESLint plugin lookup fails.
 
 ## Common commands
@@ -103,15 +103,15 @@ This is a public API change from the Stitches era (the props were `variant` and 
 
 `react` and `tokens` build with `tsup src/index.tsx --format esm,cjs --dts --external react --external react-dom`. Both `react` and `react-dom` are externalized so they remain peerDependencies. `package.json` declares `main` (cjs), `module` (esm), and `types` pointing at `dist/`.
 
-### Storybook 8 layout
+### Storybook 10 layout
 
 The docs package uses `@storybook/react-vite` (combined framework + builder). [packages/docs/.storybook/](packages/docs/.storybook/) contains:
 
-- `main.ts` — typed `StorybookConfig`
-- `manager.ts` — UI theme overrides (imports from `@storybook/manager-api`/`@storybook/theming`)
-- `preview.tsx` — global decorators; the **ThemeProvider decorator** wraps every story in `<ThemeProvider theme={defaultTheme}>` so styled-components theme functions resolve
+- `main.ts` — typed `StorybookConfig`. The addon list is `addon-links`, `addon-docs`, `addon-a11y` only; `addon-essentials`/`addon-interactions`/`addon-actions` are gone in SB10 (controls, actions and viewport are now core).
+- `manager.ts` — UI theme overrides (imports from `storybook/manager-api` and `storybook/theming` — the standalone `@storybook/manager-api`/`@storybook/theming` packages were merged into the main `storybook` entry point in SB9+).
+- `preview.tsx` — global decorators; the **ThemeProvider decorator** wraps every story in `<ThemeProvider theme={defaultTheme}>` so styled-components theme functions resolve. `Preview` type comes from `@storybook/react-vite`.
 
-When adding a story, place it in `src/stories/` with a `.stories.tsx` extension. Documentation pages live in `src/pages/` as plain `.mdx` files using `import { Meta } from '@storybook/blocks'` (CSF doc files were removed in SB8).
+When adding a story, place it in `src/stories/` with a `.stories.tsx` extension. Documentation pages live in `src/pages/` as plain `.mdx` files using `import { Meta } from '@storybook/addon-docs/blocks'` (CSF doc files were removed in SB8 and the standalone `@storybook/blocks` package was retired in SB10).
 
 ### Releases via Changesets
 
