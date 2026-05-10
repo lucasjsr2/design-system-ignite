@@ -1,0 +1,3 @@
+import{n as e}from"./chunk-DnJy8xQt.js";import{_ as t}from"./iframe-D6WwP7FQ.js";import{r as n}from"./react-C5F6W4qF.js";import{a as r,o as i}from"./blocks-DGrtfHOc.js";import{t as a}from"./mdx-react-shim-B-ETKMJL.js";function o(e){let t={h1:`h1`,p:`p`,...n(),...e.components};return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(r,{title:`Home`}),`
+`,(0,c.jsx)(t.h1,{id:`ignite-ui`,children:`Ignite UI`}),`
+`,(0,c.jsx)(t.p,{children:`Design System do Ignite.`})]})}function s(e={}){let{wrapper:t}={...n(),...e.components};return t?(0,c.jsx)(t,{...e,children:(0,c.jsx)(o,{...e})}):o(e)}var c;e((()=>{c=t(),a(),i()}))();export{s as default};

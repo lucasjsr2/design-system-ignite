@@ -1,0 +1,6 @@
+import{n as e}from"./chunk-DnJy8xQt.js";import{f as t,s as n}from"./iframe-D6WwP7FQ.js";var r,i,a,o;e((()=>{t(),r={title:`Typography/Text`,component:n,argTypes:{$size:{options:[`xxs`,`xs`,`sm`,`md`,`lg`,`xl`,`2xl`,`4xl`,`5xl`,`6xl`,`7xl`,`8xl`,`9xl`],control:{type:`inline-radio`}}},args:{$size:`md`,children:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum incidunt facere facilis quos vel reiciendis natus dolores suscipit commodi inventore, exercitationem nostrum accusamus at debitis. Dicta porro maxime libero repudiandae.`}},i={},a={args:{as:`strong`,children:`Strong text`}},i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`{}`,...i.parameters?.docs?.source}}},a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
+  args: {
+    as: 'strong',
+    children: 'Strong text'
+  }
+}`,...a.parameters?.docs?.source}}},o=[`Primary`,`CustomTag`]}))();export{a as CustomTag,i as Primary,o as __namedExportsOrder,r as default};

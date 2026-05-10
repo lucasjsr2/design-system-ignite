@@ -1,0 +1,3 @@
+import{n as e}from"./chunk-DnJy8xQt.js";import{_ as t}from"./iframe-D6WwP7FQ.js";import{r as n}from"./react-C5F6W4qF.js";import{a as r,o as i}from"./blocks-DGrtfHOc.js";import{t as a}from"./mdx-react-shim-B-ETKMJL.js";import{a as o,i as s}from"./dist-CX74N4_T.js";import{n as c,t as l}from"./TokensGrid-CD4g2Cjf.js";function u(e){let t={h1:`h1`,...n(),...e.components};return(0,f.jsxs)(f.Fragment,{children:[(0,f.jsx)(r,{title:`Tokens/Fonts`}),`
+`,(0,f.jsx)(t.h1,{id:`fonts`,children:`Fonts`}),`
+`,(0,f.jsx)(l,{tokens:s})]})}function d(e={}){let{wrapper:t}={...n(),...e.components};return t?(0,f.jsx)(t,{...e,children:(0,f.jsx)(u,{...e})}):u(e)}var f;e((()=>{f=t(),a(),i(),c(),o()}))();export{d as default};
