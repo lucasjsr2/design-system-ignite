@@ -9,7 +9,7 @@ export default {
   },
   argTypes: {
     children: {
-      control: { type: '' },
+      control: false,
     },
   },
 } as Meta<AvatarProps>

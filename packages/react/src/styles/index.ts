@@ -1,35 +1,20 @@
+import 'styled-components'
 import {
-  colors,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-  radii,
-  space,
-  fonts,
+  defaultTheme,
+  type DefaultTheme as TokensTheme,
 } from '@lucasjsr/tokens'
-import { createStitches, defaultThemeMap } from '@stitches/react'
 
-export const {
-  styled,
-  globalCss,
+declare module 'styled-components' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends TokensTheme {}
+}
+
+export {
+  ThemeProvider,
+  createGlobalStyle,
+  css,
   keyframes,
-  getCssText,
-  theme,
-  createTheme,
-  config,
-} = createStitches({
-  themeMap: {
-    ...defaultThemeMap,
-    height: 'space',
-    width: 'space',
-  },
-  theme: {
-    colors,
-    lineHeights,
-    fontSizes,
-    fontWeights,
-    radii,
-    space,
-    fonts,
-  },
-})
+  styled,
+} from 'styled-components'
+
+export { defaultTheme }

@@ -5,13 +5,13 @@ export default {
   title: 'Typography/Heading',
   component: Heading,
   argTypes: {
-    size: {
-      options: ['sm', 'md', 'lg', 'xl', '2xl', '4xl', '5xl', '6xl'],
+    $size: {
+      options: ['sm', 'md', 'lg', '2xl', '3xl', '4xl', '5xl', '6xl'],
       control: { type: 'inline-radio' },
     },
   },
   args: {
-    size: 'md',
+    $size: 'md',
     children: 'Custom title',
   },
 } as Meta<HeadingProps>
@@ -27,7 +27,7 @@ export const CustomTag: StoryObj<HeadingProps> = {
     docs: {
       description: {
         story:
-          'Por padrão o heading sempre será um `H2`, mas podemos alterar issso com a propriedade `as`',
+          'Por padrão o heading sempre será um `H2`, mas podemos alterar isso com a propriedade `as`',
       },
     },
   },

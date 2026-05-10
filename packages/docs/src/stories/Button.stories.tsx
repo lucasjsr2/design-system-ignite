@@ -7,16 +7,16 @@ export default {
   component: Button,
   args: {
     children: 'Send',
-    variant: 'primary',
-    size: 'md',
+    $variant: 'primary',
+    $size: 'md',
     disabled: false,
   },
   argTypes: {
-    variant: {
+    $variant: {
       options: ['primary', 'secondary', 'tertiary'],
       control: { type: 'inline-radio' },
     },
-    size: {
+    $size: {
       options: ['sm', 'md'],
       control: { type: 'inline-radio' },
     },
@@ -31,20 +31,20 @@ export const Primary: StoryObj<ButtonProps> = {}
 
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    variant: 'secondary',
+    $variant: 'secondary',
   },
 }
 
 export const Tertiary: StoryObj<ButtonProps> = {
   args: {
-    variant: 'tertiary',
+    $variant: 'tertiary',
     children: 'Cancel',
   },
 }
 
 export const Small: StoryObj<ButtonProps> = {
   args: {
-    size: 'sm',
+    $size: 'sm',
   },
 }
 
@@ -62,6 +62,6 @@ export const WithIcon: StoryObj<ButtonProps> = {
 export const Disabled: StoryObj<ButtonProps> = {
   args: {
     disabled: true,
-    variant: 'primary',
+    $variant: 'primary',
   },
 }

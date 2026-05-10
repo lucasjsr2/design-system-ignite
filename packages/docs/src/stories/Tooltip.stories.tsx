@@ -10,22 +10,18 @@ export default {
   },
   decorators: [
     (Story) => (
-      <Box css={{ display: 'grid', placeItems: 'center', height: '164px' }}>
+      <Box style={{ display: 'grid', placeItems: 'center', height: '164px' }}>
         <Story />
       </Box>
     ),
   ],
   argTypes: {
     triggerElement: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
     side: {
       options: ['top', 'right', 'bottom', 'left'],
-      control: {
-        type: 'inline-radio',
-      },
+      control: { type: 'inline-radio' },
     },
   },
 } as Meta<TooltipProps>

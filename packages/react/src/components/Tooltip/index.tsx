@@ -20,7 +20,7 @@ export const Tooltip = ({
           {triggerElement}
         </TooltipComponent.Trigger>
         <TooltipContent {...props}>
-          <Text size="xs">{text}</Text>
+          <Text $size="xs">{text}</Text>
           <TooltipArrow height={8} width={16} />
         </TooltipContent>
       </TooltipComponent.Root>

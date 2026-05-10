@@ -11,10 +11,10 @@ export const MultiStep = ({ size, currentStep = 1 }: MultiStepProps) => {
       <Label>
         Passo {currentStep} de {size}
       </Label>
-      <Steps css={{ '--steps-size': size }}>
-        {Array.from({ length: size }, (_, index) => index + 1).map((step) => {
-          return <Step active={currentStep >= step} key={step}></Step>
-        })}
+      <Steps $size={size}>
+        {Array.from({ length: size }, (_, index) => index + 1).map((step) => (
+          <Step $active={currentStep >= step} key={step} />
+        ))}
       </Steps>
     </MultiStepContainer>
   )

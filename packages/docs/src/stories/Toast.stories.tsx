@@ -6,7 +6,7 @@ export default {
   component: Toast,
   decorators: [
     (Story) => (
-      <Box css={{ display: 'grid', placeItems: 'center', height: '240px' }}>
+      <Box style={{ display: 'grid', placeItems: 'center', height: '240px' }}>
         <Story />
       </Box>
     ),

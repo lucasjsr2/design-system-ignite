@@ -6,17 +6,15 @@ export default {
   component: TextInput,
   args: {},
   decorators: [
-    (Story) => {
-      return (
-        <Box
-          as="label"
-          css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
-        >
-          <Text size="sm">E-mail</Text>
-          {Story()}
-        </Box>
-      )
-    },
+    (Story) => (
+      <Box
+        as="label"
+        style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
+      >
+        <Text $size="sm">E-mail</Text>
+        {Story()}
+      </Box>
+    ),
   ],
 } as Meta<TextInputProps>
 

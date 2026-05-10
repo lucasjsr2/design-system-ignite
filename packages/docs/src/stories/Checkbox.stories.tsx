@@ -6,14 +6,12 @@ export default {
   component: Checkbox,
   args: {},
   decorators: [
-    (Story) => {
-      return (
-        <Box as="label" css={{ display: 'flex', gap: '$3' }}>
-          {Story()}
-          <Text size="sm">Accept therms of use</Text>
-        </Box>
-      )
-    },
+    (Story) => (
+      <Box as="label" style={{ display: 'flex', gap: '0.75rem' }}>
+        {Story()}
+        <Text $size="sm">Accept terms of use</Text>
+      </Box>
+    ),
   ],
 } as Meta<CheckboxProps>
 

@@ -6,8 +6,9 @@ export default {
   component: Text,
 
   argTypes: {
-    size: {
+    $size: {
       options: [
+        'xxs',
         'xs',
         'sm',
         'md',
@@ -25,7 +26,7 @@ export default {
     },
   },
   args: {
-    size: 'md',
+    $size: 'md',
     children:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum incidunt facere facilis quos vel reiciendis natus dolores suscipit commodi inventore, exercitationem nostrum accusamus at debitis. Dicta porro maxime libero repudiandae.',
   },

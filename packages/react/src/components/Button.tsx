@@ -1,93 +1,92 @@
-import { ComponentProps, ElementType } from 'react'
-import { styled } from '../styles'
+import type { ComponentProps, ElementType } from 'react'
+import { css, styled } from '../styles'
 
-export const Button = styled('button', {
-  all: 'unset',
-  borderRadius: '$sm',
-  fontSize: '$sm',
-  fontFamily: '$default',
-  textAlign: 'center',
-  fontWeight: '$medium',
-  minWidth: 120,
-  boxSizing: 'border-box',
+export type ButtonVariant = 'primary' | 'secondary' | 'tertiary'
+export type ButtonSize = 'sm' | 'md'
 
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$2',
-  transition: 'all 0.2s ease-in-out',
+const buttonVariants: Record<ButtonVariant, ReturnType<typeof css>> = {
+  primary: css`
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.ignite500};
 
-  cursor: 'pointer',
+    &:not(:disabled):hover {
+      background: ${({ theme }) => theme.colors.ignite300};
+    }
 
-  svg: {
-    width: '$4',
-    height: '$4',
-  },
+    &:disabled {
+      background: ${({ theme }) => theme.colors.gray200};
+    }
+  `,
+  secondary: css`
+    color: ${({ theme }) => theme.colors.ignite300};
+    border: 2px solid ${({ theme }) => theme.colors.ignite500};
 
-  '&:disabled': {
-    cursor: 'not-allowed',
-  },
+    &:not(:disabled):hover {
+      background: ${({ theme }) => theme.colors.ignite500};
+      color: ${({ theme }) => theme.colors.white};
+    }
 
-  variants: {
-    variant: {
-      primary: {
-        color: '$white',
-        background: '$ignite500',
+    &:disabled {
+      color: ${({ theme }) => theme.colors.gray200};
+      border-color: ${({ theme }) => theme.colors.gray200};
+    }
+  `,
+  tertiary: css`
+    color: ${({ theme }) => theme.colors.gray100};
 
-        '&:not(:disabled):hover': {
-          background: '$ignite300',
-        },
+    &:not(:disabled):hover {
+      color: ${({ theme }) => theme.colors.white};
+    }
 
-        '&:disabled': {
-          background: '$gray200',
-        },
-      },
+    &:disabled {
+      border-color: ${({ theme }) => theme.colors.gray600};
+    }
+  `,
+}
 
-      secondary: {
-        color: '$ignite300',
-        border: '2px solid $ignite500',
+const buttonSizes: Record<ButtonSize, ReturnType<typeof css>> = {
+  sm: css`
+    height: 38px;
+  `,
+  md: css`
+    padding: 0 ${({ theme }) => theme.space[4]};
+    height: 46px;
+  `,
+}
 
-        '&:not(:disabled):hover': {
-          background: '$ignite500',
-          color: '$white',
-        },
+export const Button = styled.button<{
+  $variant?: ButtonVariant
+  $size?: ButtonSize
+}>`
+  all: unset;
+  border-radius: ${({ theme }) => theme.radii.sm};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-family: ${({ theme }) => theme.fonts.default};
+  text-align: center;
+  font-weight: ${({ theme }) => theme.fontWeights.medium};
+  min-width: 120px;
+  box-sizing: border-box;
 
-        '&:disabled': {
-          color: '$gray200',
-          borderColor: '$gray200',
-        },
-      },
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: ${({ theme }) => theme.space[2]};
+  transition: all 0.2s ease-in-out;
 
-      tertiary: {
-        color: '$gray100',
+  cursor: pointer;
 
-        '&:not(:disabled):hover': {
-          color: '$white',
-        },
+  svg {
+    width: ${({ theme }) => theme.space[4]};
+    height: ${({ theme }) => theme.space[4]};
+  }
 
-        '&:disabled': {
-          borderColor: '$gray600',
-        },
-      },
-    },
+  &:disabled {
+    cursor: not-allowed;
+  }
 
-    size: {
-      sm: {
-        height: 38,
-      },
-
-      md: {
-        padding: '0 $4',
-        height: 46,
-      },
-    },
-  },
-
-  defaultVariants: {
-    variant: 'primary',
-    size: 'md',
-  },
-})
+  ${({ $variant = 'primary' }) => buttonVariants[$variant]}
+  ${({ $size = 'md' }) => buttonSizes[$size]}
+`
 
 export type ButtonProps = ComponentProps<typeof Button> & {
   as?: ElementType

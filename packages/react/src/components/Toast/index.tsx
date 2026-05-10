@@ -22,11 +22,11 @@ export const Toast = ({
     <ToastComponent.Provider duration={5000}>
       <ToastContainer {...props}>
         <ToastComponent.Title>
-          <StyledHeading size="md">{title}</StyledHeading>
+          <StyledHeading $size="md">{title}</StyledHeading>
         </ToastComponent.Title>
 
         <ToastComponent.Description>
-          <StyledText size="sm">{description}</StyledText>
+          <StyledText $size="sm">{description}</StyledText>
         </ToastComponent.Description>
 
         <ToastCloseButton aria-label="Close">

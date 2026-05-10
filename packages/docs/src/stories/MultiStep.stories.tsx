@@ -1,4 +1,4 @@
-import { Box, Text, MultiStep, MultiStepProps } from '@lucasjsr/react'
+import { Box, MultiStep, MultiStepProps, Text } from '@lucasjsr/react'
 import type { StoryObj, Meta } from '@storybook/react'
 
 export default {
@@ -9,16 +9,15 @@ export default {
     currentStep: 1,
   },
   decorators: [
-    (Story) => {
-      return (
-        <Box
-          as="label"
-          css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
-        >
-          {Story()}
-        </Box>
-      )
-    },
+    (Story) => (
+      <Box
+        as="label"
+        style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
+      >
+        <Text $size="sm">Multi step</Text>
+        {Story()}
+      </Box>
+    ),
   ],
 } as Meta<MultiStepProps>
 
