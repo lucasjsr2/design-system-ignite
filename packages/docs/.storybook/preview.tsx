@@ -1,11 +1,10 @@
-import type { Preview } from '@storybook/react'
+import type { Preview } from '@storybook/react-vite'
 import { ThemeProvider, defaultTheme } from '@lucasjsr/react'
-import { themes } from '@storybook/theming'
+import { themes } from 'storybook/theming'
 import React from 'react'
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
