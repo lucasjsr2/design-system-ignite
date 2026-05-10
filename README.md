@@ -8,11 +8,17 @@ Welcome to Design System Ignite! This design system is a recreation of Rocketsea
 
 ## Features
 
-- 📚 Comprehensive documentation with interactive Storybook.
-- 🚀 Fast and efficient monorepo setup using Turborepo.
-- 🎨 Tokens package with pre-defined colors, fonts, borders and more.
+- 📚 Comprehensive documentation with interactive Storybook 8.
+- 🚀 Fast and efficient Bun + Turborepo monorepo setup.
+- 🎨 Tokens package with pre-defined colors, fonts, borders and more — exported as a `defaultTheme` ready for `<ThemeProvider>`.
+- 💅 React 19 components built with styled-components 6 (Stitches has been retired).
 - 🧹 ESLint configuration for consistent code style across your project.
-- ⚛️ React components to build your applications using the design system.
+- ⚛️ React 19 + TypeScript 6 components to build your applications using the design system.
+
+## Requirements
+
+- Node `>=22`
+- Bun `>=1.3` (the repo uses Bun for installs and scripts; `bun install` then `bun run dev`)
 
 ## Packages
 
