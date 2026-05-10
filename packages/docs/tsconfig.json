@@ -1,4 +1,7 @@
 {
-    "extends": "@lucasjsr/ts-config/react.json",
-    "include": ["src", ".storybook"]
+  "extends": "@lucasjsr/ts-config/react.json",
+  "include": [
+    "src",
+    ".storybook"
+  ]
 }

@@ -1,6 +1,6 @@
 {
-    "extends": "@lucasjsr/eslint-config",
-    "ignorePatterns": [
-        "dist/*"
-    ]
+  "extends": "@lucasjsr/eslint-config",
+  "ignorePatterns": [
+    "dist/*"
+  ]
 }

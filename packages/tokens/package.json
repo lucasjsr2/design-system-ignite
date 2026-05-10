@@ -1,23 +1,23 @@
 {
-    "name": "@lucasjsr/tokens",
-    "version": "1.1.1",
-    "description": "",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsup src/index.ts --format esm,cjs --dts",
-        "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-        "lint": "eslint src/**/*.ts* --fix"
-    },
-    "keywords": [],
-    "author": "Lucas Juan",
-    "license": "MIT",
-    "devDependencies": {
-        "@lucasjsr/eslint-config": "*",
-        "@lucasjsr/ts-config": "*",
-        "tsup": "^8.5.1",
-        "typescript": "^6.0.3"
-    }
+  "name": "@lucasjsr/tokens",
+  "version": "1.1.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "lint": "eslint src/**/*.ts* --fix"
+  },
+  "keywords": [],
+  "author": "Lucas Juan",
+  "license": "MIT",
+  "devDependencies": {
+    "@lucasjsr/eslint-config": "*",
+    "@lucasjsr/ts-config": "*",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
 }
