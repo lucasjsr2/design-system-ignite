@@ -33,8 +33,8 @@
     "@lucasjsr/react": "*",
     "@lucasjsr/tokens": "*",
     "@lucasjsr/ts-config": "*",
-    "phosphor-react": "^1.4.1",
-    "polished": "^4.2.2",
+    "@phosphor-icons/react": "^2.1.10",
+    "polished": "^4.3.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   }

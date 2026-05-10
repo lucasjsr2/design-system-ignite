@@ -1,6 +1,6 @@
 import { ComponentProps, ReactElement } from 'react'
 import * as ToastComponent from '@radix-ui/react-toast'
-import { X } from 'phosphor-react'
+import { X } from '@phosphor-icons/react'
 import {
   ToastContainer,
   StyledHeading,
