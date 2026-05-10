@@ -3,10 +3,9 @@
     "compilerOptions": {
         "jsx": "react-jsx",
         "lib": [
-            "dom",
-            "ES2015"
-        ],
-        "module": "ESNext",
-        "target": "es6"
+            "DOM",
+            "DOM.Iterable",
+            "ES2022"
+        ]
     }
 }
